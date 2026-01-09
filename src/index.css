@@ -22,3 +22,6 @@
 .gradient-color{
   background: linear-gradient(45deg,#b772ff, #ec88bc);
 }
+input:focus{
+  border-color: #b772ff !important;
+}

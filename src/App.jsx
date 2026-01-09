@@ -6,9 +6,11 @@ import { Footer } from './components/Footer'
 import { Search } from './components/Search'
 import { Articles } from './pages/Articles'
 import { useState } from 'react'
+import { useDebounce } from './hooks/useDeounce'
 
 function App() {
   const [searchText, setSearchText] = useState("");
+  const debouncedSearch = useDebounce(searchText, 500);
   return (
     <>
       <Header></Header>
@@ -22,7 +24,7 @@ function App() {
         
         <div className='divider flex justify-center items-center mx-4 my-2 w-fuññ'></div>
         <div className='overflow-auto h-[75vh]'>
-          <Articles searchText={searchText}></Articles>
+          <Articles searchText={debouncedSearch}></Articles>
         </div>
 
       </div>
