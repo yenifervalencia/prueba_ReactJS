@@ -9,7 +9,8 @@ export const Search = ({ searchText, setSearchText }) => {
         placeholder="Buscar por título..."
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
-        className="border p-2 w-full max-w-md rounded"
+        className="px-3 w-full max-w-md rounded h-9 border border-gray-300 rounded-md
+        outline-none focus:ring-1"
       />
     </div>
   );
